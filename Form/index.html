@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <form action="" onsubmit="validateForm()" class="myForm">
+            <label for="fullName">Name</label>
+            <input type="text" id="fullName" placeholder="Full Name" required>
+            
+            <label for="dob">Date of Birth</label>
+            <input type="date" id="dob" required>
+            
+            <label for="startDate">Start Date</label>
+            <input type="date" id="startDate" required>
+            
+            <label for="endDate">End Date</label>
+            <input type="date" id="endDate" onchange="return dateChange(this)" required>
+
+            <label for="uploadFile">Upload File</label>
+            <input type="file" id="uploadfile" onchange="return fileValidation(this)" required>
+            <p id="fileUploaded"></p>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
